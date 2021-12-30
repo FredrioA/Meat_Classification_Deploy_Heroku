@@ -9,7 +9,7 @@ app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = './static/uploads/'
 model = load_model('meat_model.h5')
 
-class_dict = {0: 'Fresh', 1: 'Spoiled'}
+class_dict = {0: 'Spoiled', 1: 'Fresh'}
 
 def predict_label(img_path):
     loaded_img = load_img(img_path, target_size=(150, 150))
